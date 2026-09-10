@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1">
+    <stop offset="0" stop-color="#0b1020"/><stop offset=".45" stop-color="#172554"/><stop offset="1" stop-color="#7c2d12"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" x2="1"><stop stop-color="#38bdf8"/><stop offset=".55" stop-color="#a78bfa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#fff" stroke-opacity=".06"/></pattern>
+</defs>
+<title id="title">Surajkumar Patil — AI/ML and Full-Stack Engineer</title>
+<desc id="desc">Animated developer profile header with flowing light, grid and orbiting nodes.</desc>
+<rect width="1400" height="360" rx="28" fill="url(#bg)"/>
+<rect width="1400" height="360" rx="28" fill="url(#grid)"/>
+<ellipse cx="1120" cy="90" rx="260" ry="100" fill="#fb923c" opacity=".16" filter="url(#blur)">
+  <animate attributeName="cx" values="1080;1180;1080" dur="7s" repeatCount="indefinite"/>
+</ellipse>
+<ellipse cx="320" cy="280" rx="300" ry="100" fill="#38bdf8" opacity=".13" filter="url(#blur)">
+  <animate attributeName="cx" values="260;360;260" dur="8s" repeatCount="indefinite"/>
+</ellipse>
+<path d="M-30 285 C260 175 430 345 690 235 S1130 105 1430 225" fill="none" stroke="url(#glow)" stroke-width="3" opacity=".75">
+  <animate attributeName="d" dur="9s" repeatCount="indefinite" values="M-30 285 C260 175 430 345 690 235 S1130 105 1430 225;M-30 235 C240 345 450 135 700 255 S1120 335 1430 165;M-30 285 C260 175 430 345 690 235 S1130 105 1430 225"/>
+</path>
+<g fill="none" stroke="#fff" stroke-opacity=".24">
+  <circle cx="1190" cy="105" r="72"><animateTransform attributeName="transform" type="rotate" from="0 1190 105" to="360 1190 105" dur="14s" repeatCount="indefinite"/></circle>
+  <circle cx="1190" cy="105" r="52" stroke-dasharray="3 9"><animateTransform attributeName="transform" type="rotate" from="360 1190 105" to="0 1190 105" dur="9s" repeatCount="indefinite"/></circle>
+</g>
+<g fill="#fff">
+  <circle cx="1120" cy="165" r="3"><animate attributeName="opacity" values=".2;1;.2" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="1260" cy="165" r="3"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="1190" cy="35" r="3"><animate attributeName="opacity" values=".3;1;.3" dur="1.8s" repeatCount="indefinite"/></circle>
+</g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle" fill="#fff">
+  <text x="700" y="145" font-size="52" font-weight="800" letter-spacing="2">SURAJKUMAR PATIL</text>
+  <text x="700" y="188" font-size="18" font-weight="600" fill="#dbeafe">AI/ML • FULL-STACK • INTELLIGENT SYSTEMS</text>
+  <text x="700" y="235" font-size="17" fill="#cbd5e1"><tspan opacity="1">Building intelligent products that ship</tspan></text>
+</g>
+<rect x="0" y="0" width="1400" height="360" rx="28" fill="none" stroke="#ffffff" stroke-opacity=".10"/>
+</svg>
