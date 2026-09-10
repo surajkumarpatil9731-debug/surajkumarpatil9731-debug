@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/workflows/profile-3d.yml"
       - "README.md"
+      - "assets/footer.svg"
 
 permissions:
   contents: write
