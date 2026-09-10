@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Surajkumar Patil — AI/ML • Full-Stack • Intelligent Systems" />
+<img src="./assets/hero-wallpaper.gif" width="100%" alt="Surajkumar Patil — AI/ML • Full-Stack • Intelligent Systems" />
 
 <br/>
 
@@ -171,6 +171,6 @@ I'm interested in collaborating on:
 
 <div align="center">
 
-<img src="./assets/footer.svg" width="100%" alt="Animated footer" />
+<sub>Build • Learn • Ship • Improve</sub>
 
 </div>
