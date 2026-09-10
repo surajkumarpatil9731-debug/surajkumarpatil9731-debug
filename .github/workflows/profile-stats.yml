@@ -17,16 +17,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate static GitHub profile cards
+      - name: Generate activity consistency cards
+        id: activity
         uses: shinpr/github-profile-stats@49b5f7091182a45f3ef93923505b660c6da5f835
         with:
           username: ${{ github.repository_owner }}
+          token: ${{ github.token }}
+          profile: activity-consistency
 
-      - name: Commit generated cards
+      - name: Generate language composition cards
+        id: language
+        uses: shinpr/github-profile-stats@49b5f7091182a45f3ef93923505b660c6da5f835
+        with:
+          username: ${{ github.repository_owner }}
+          token: ${{ github.token }}
+          profile: language-composition
+
+      - name: Stage generated cards
+        env:
+          ACTIVITY_DIR: ${{ steps.activity.outputs.ready-dir }}
+          LANGUAGE_DIR: ${{ steps.language.outputs.ready-dir }}
         run: |
+          mkdir -p profile
+          cp "$ACTIVITY_DIR"/activity-consistency-*.svg profile/
+          cp "$LANGUAGE_DIR"/language-composition-*.svg profile/
+          test -s profile/activity-consistency-wide-light.svg
+          test -s profile/activity-consistency-wide-dark.svg
+          test -s profile/language-composition-wide-light.svg
+          test -s profile/language-composition-wide-dark.svg
+          git add profile/activity-consistency-*.svg profile/language-composition-*.svg
+
+      - name: Publish generated cards
+        run: |
+          if git diff --cached --quiet; then
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/
-          git diff --cached --quiet && exit 0
           git commit -m "chore: refresh profile analytics"
+          git pull --rebase origin main
           git push
