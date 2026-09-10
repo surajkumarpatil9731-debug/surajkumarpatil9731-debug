@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 150">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#0ea5e9"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs>
+<rect width="1400" height="150" fill="#0b1020"/>
+<path d="M0 95 C220 20 360 150 600 75 S1000 25 1400 95 V150 H0Z" fill="url(#g)" opacity=".22">
+<animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0 95 C220 20 360 150 600 75 S1000 25 1400 95 V150 H0Z;M0 75 C240 150 390 10 620 90 S1020 150 1400 65 V150 H0Z;M0 95 C220 20 360 150 600 75 S1000 25 1400 95 V150 H0Z"/>
+</path>
+<path d="M0 95 C220 20 360 150 600 75 S1000 25 1400 95" fill="none" stroke="url(#g)" stroke-width="2"/>
+<text x="700" y="120" text-anchor="middle" fill="#94a3b8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Build • Learn • Ship • Improve</text>
+</svg>
